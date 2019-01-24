@@ -8,35 +8,35 @@
 <form action="{{ url('books/update') }}" method="POST">
 <!-- item_name -->
 <div class="form-group">
-<label for="item_name">􏰍itle</label>
+<label for="item_name">患者名</label>
 <input type="text" id="item_name" name="item_name" class="form-control" value="{{$book->item_name}}">
 </div>
 <!--/ item_name -->
-<!-- item_number -->
+<!-- age -->
 <div class="form-group">
-<label for="item_number">􏰎umber</label>
+<label for="item_number">年齢</label>
 <input type="text" id="item_number" name="item_number" class="form-control" value="{{$book->item_number}}">
 </div>
 <!--/ item_number -->
-<!-- item_amount -->
+<!-- area -->
 <div class="form-group">
-<label for="item_amount">Amount</label>
-<input type="text" id="item_amount" name="item_amount" class="form-control" value="{{$book->item_amount}}">
+<label for="area">地域</label>
+<input type="text" id="area" name="area" class="form-control" value="{{$book->area}}">
 </div>
-<!--/ item_amount -->
-<!-- published -->
+<!--/ area -->
+<!-- comment -->
 <div class="form-group">
-<label for="published">published</label>
-<input type="datetime" id="published" name="published" class="form-control" value="{{$book->published}}"/>
+<label for="comment">コメント</label>
+<input type="text" id="comment" name="comment" class="form-control" value="{{$book->comment}}"/>
 </div>
 <!--/ published -->
 <!-- 􏰄ave ボタン/Back ボタン -->
 <div class="well well-sm">
-<button type="submit" class="btn btn-primary">􏰄ave</button>
+<button type="submit" class="btn btn-primary">送信</button>
 <a class="btn btn-link pull-right" href="{{ url('/') }}">
-<i class="glyphicon glyphicon-backward"></i> Back
+<i class="glyphicon glyphicon-backward"></i> 戻る
 </a> </div>
-<!--/ 􏰄ave ボタン/Back ボタン -->
+<!--/ save ボタン/Back ボタン -->
 <!-- id 値を送信 -->
 <input type="hidden" name="id" value="{{$book->id}}" /> <!--/ id 値を送信 -->
 <!-- C􏰄􏰌F -->

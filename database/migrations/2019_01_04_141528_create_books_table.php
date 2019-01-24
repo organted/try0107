@@ -18,8 +18,8 @@ class CreateBooksTable extends Migration
             $table->integer('user_id');  //add user_id
             $table->string('item_name');
             $table->integer('item_number');
-            $table->string('item_amount');
-            $table->datetime('published');
+            $table->string('area');
+            $table->string('comment')->nullable();
             $table->timestamps();
         });
     }

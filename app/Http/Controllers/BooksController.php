@@ -59,8 +59,8 @@ public function update(Request $request)
         'id' => 'required',
         'item_name' => 'required|min:1|max:255',
         'item_number' => 'required|min:1|max:3',
-        'item_amount' => 'required|max:6',
-        'published' => 'required',
+        'area' => 'required|max:6',
+        'comment' => 'required',
         ]);
 //バリデーション:エラー
     if ($validator->fails()) {
@@ -72,8 +72,8 @@ public function update(Request $request)
     $books = Book::where('user_id',Auth::user()->id)->find($request->id);
     $books->item_name   = $request->item_name;
     $books->item_number = $request->item_number;
-    $books->item_amount = $request->item_amount;
-    $books->published   = $request->published;
+    $books->area = $request->area;
+    $books->comment   = $request->comment;
     $books->save();
     return redirect('/');
     
@@ -86,8 +86,8 @@ public function store(Request $request) {
 $validator = Validator::make($request->all(), [
             'item_name' => 'required|min:3|max:255',
             'item_number' => 'required|min:1|max:3',
-            'item_amount' => 'required|max:6',
-            'published' => 'required'
+            'area' => 'required|max:25',
+            'comment' => 'required'
 ]); //バリデーション:エラー 
 if ($validator->fails()) {
             return redirect('/')
@@ -101,8 +101,8 @@ $books = new Book;
 $books->user_id     = Auth::user()->id;
 $books->item_name   = $request->item_name; 
 $books->item_number = $request->item_number; 
-$books->item_amount = $request->item_amount; 
-$books->published   = $request->published; 
+$books->area = $request->area; 
+$books->comment   = $request->comment; 
 $books->save();
 return redirect('/');
 
@@ -112,8 +112,9 @@ $validator = Validator::make($request->all(), [
         'id' => 'required',
         'item_name' => 'required|min:3|max:255',
         'item_number' => 'required|min:1|max:3',
-        'item_amount' => 'required|max:6',
-        'published' => 'required',
+        'area' => 'required|max:55',
+        'comment' => 'required|max:100',
+        
 ]); //バリデーション:エラー 
 }
 }

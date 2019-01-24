@@ -204,17 +204,18 @@
 </div>
                 
 <div class="col-sm-6">
-<label for="amount" class="col-sm-3 control-label">地域</label>
-<input type="text" name="item_amount" id="book-amount" class="form-control">
+<label for="area" class="col-sm-3 control-label">地域</label>
+<input type="text" name="area" id="book-area" class="form-control">
 </div>
 <div class="col-sm-6">
 <label for="number" class="col-sm-3 control-label">年齢</label>
 <input type="text" name="item_number" id="book-number" class="form-control">
 </div>
 <div class="col-sm-6">
-<label for="published" class="col-sm-3 control-label">登録日</label>
-<input type="date" name="published" id="book-published" class="form-control">
+<label for="comment" class="col-sm-3 control-label">コメント</label>
+<textarea  name="comment" id="book-comment" class="form-control"></textarea>
 </div>
+<!--<textarea name="お問い合わせ内容" cols="50" rows="5"></textarea>-->
 
 </div>
 <!-- 本 登録ボタン -->
